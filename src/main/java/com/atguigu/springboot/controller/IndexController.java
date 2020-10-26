@@ -8,6 +8,6 @@ public class IndexController {
 	@GetMapping("/index1")
 	public String index(){
 		return "index.html";
-		//注释123
+		//注释123aaaa
 	}
 }
