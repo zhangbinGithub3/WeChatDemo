@@ -1,0 +1,20 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lims?serverTimezone=GMT
+    initialization-mode: always
+    schema:
+      - classpath:sql/department.sql
+      - classpath:sql/employee.sql
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+webSocket:
+  netty:
+    port: 58080
+    path: /webSocket
